@@ -3,9 +3,12 @@ package webservice;
 import models.People;
 import models.User;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
+import javax.ws.rs.core.Context;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -63,4 +66,24 @@ public class WebService {
         }
         return peopleList;
     }
+
+
+    @GET
+    @Path("/sessionCreat")
+    @Produces("application/json;charset=utf-8")
+    public String sessionCreate(@Context HttpServletRequest request) {
+        /*
+             Sesion tanımlamak için kullanılan metot
+         */
+        HttpSession session = request.getSession();
+        if (session.isNew()) {
+            return "Sesion değişkeni tanımladı";
+
+        } else {
+            return "Sesion değişkeni zaten mevcut";
+        }
+
+    }
+
+
 }
