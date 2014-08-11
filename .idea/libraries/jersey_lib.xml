@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="jersey-lib">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/jars/asm-3.1.jar!/" />
+      <root url="jar://$USER_HOME$/jars/jackson-core-asl-1.8.9.jar!/" />
+      <root url="jar://$USER_HOME$/jars/jackson-jaxrs-1.8.9.jar!/" />
+      <root url="jar://$USER_HOME$/jars/jackson-mapper-asl-1.8.9.jar!/" />
+      <root url="jar://$USER_HOME$/jars/jackson-xc-1.8.9.jar!/" />
+      <root url="jar://$USER_HOME$/jars/jersey-core-1.8.jar!/" />
+      <root url="jar://$USER_HOME$/jars/jersey-json-1.8.jar!/" />
+      <root url="jar://$USER_HOME$/jars/jersey-server-1.8.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
