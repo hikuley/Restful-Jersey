@@ -10,11 +10,11 @@ import javax.ws.rs.core.UriInfo;
  * Created by halil on 11.08.2014.
  */
 @Path("/example3")
+@Produces("application/json")
 public class Examples3 {
 
 
     @GET
-    @Produces("application/json")
     @Path("multiValueGet")
     public MultivaluedMap<String, String> getUrlInfo(@Context UriInfo ui) {
         /*
@@ -25,7 +25,6 @@ public class Examples3 {
     }
 
     @POST
-    @Produces("application/json")
     @Path("multiValuePost")
     @Consumes("application/x-www-form-urlencoded")
     public MultivaluedMap<String, String> getMultiPost(@Context UriInfo ui) {
@@ -37,7 +36,6 @@ public class Examples3 {
     }
 
     @POST
-    @Produces("application/json")
     @Consumes("application/x-www-form-urlencoded")
     @Path("multiPostForm")
     public MultivaluedMap<String, String> post(MultivaluedMap<String, String> formParams) {
@@ -49,7 +47,6 @@ public class Examples3 {
 
     @GET
     @Path("/multiHeaderGet")
-    @Produces("application/json")
     public MultivaluedMap<String, String> getHeader(@Context HttpHeaders hh) {
         /*
         * Çoklu headerı karşılamak için kullanılır
